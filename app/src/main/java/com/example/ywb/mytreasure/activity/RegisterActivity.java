@@ -2,7 +2,9 @@ package com.example.ywb.mytreasure.activity;
 
 import android.content.ContentProvider;
 import android.net.Uri;
+import android.os.Handler;
 import android.os.Looper;
+import android.os.Message;
 import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -163,6 +165,12 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
-    }
 
+    }
+    Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 }
