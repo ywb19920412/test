@@ -153,6 +153,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()){
                     String result=response.body().string();
+                    handler.obtainMessage().sendToTarget();
                     Log.e("sads",result);
                     RegisterResult registerResult=gson.fromJson(result,RegisterResult.class);
                     Log.e("aaaaaaa",registerResult.getMsg());
